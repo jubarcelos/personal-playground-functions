@@ -1,15 +1,23 @@
 // Desafio 1
-function compareTrue() {
- 
+function compareTrue(a, b) {
+  if(a === true && b === true){
+    return true;
+  }else{
+    return false;
+  }
 }
 
 // Desafio 2
-function calcArea() {
-  
+function calcArea(base, height) {
+  return (base * altura) / 2
+}
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+
+// Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original.
+
+function splitSentence(str){
+  return array = str.split(" ");
 }
 
 // Desafio 4
