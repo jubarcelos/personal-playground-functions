@@ -25,7 +25,6 @@ function concatName(arr) {
  let first = arr.slice(-1);
  let last = arr.slice(0, 1);
  let newarr = last.concat(first);
- 
  return newarr.join(', ');
 }
 
