@@ -20,10 +20,15 @@ function splitSentence(str){
   return array = str.split(" ");
 }
 
-// Desafio 4
-function concatName() {
-  // seu código aqui
+// Desafio 4 'ÚLTIMO ITEM, PRIMEIRO ITEM'
+function concatName(arr) {
+ let first = arr.slice(-1);
+ let last = arr.slice(0, 1);
+ let newarr = last.concat(first);
+ 
+ return newarr.join(', ');
 }
+
 
 // Desafio 5
 function footballPoints() {
