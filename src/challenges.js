@@ -1,8 +1,8 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if(a === true && b === true){
+  if (a === true && b === true) {
     return true;
-  }else{
+  } else {
     return false;
   }
 }
@@ -17,7 +17,7 @@ function calcArea(base, height) {
 
 // Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original.
 
-function splitSentence(str){
+function splitSentence(str) {
   return array = str.split(" ");
 }
 
@@ -43,13 +43,13 @@ function highestCount(numbers) {
     if (numbers[key] > tallerId) {
       tallerId = numbers[key];
     }
-    if(numbers[key]< 0){
+    if(numbers[key]< 0) {
       tallerId = numbers[key];
     }
   }
-  for(let key in numbers) {
+  for (let key in numbers) {
     if (tallerId === numbers[key]){
-    cont +=1;
+    cont += 1;
     }
   }
   return cont
@@ -60,9 +60,9 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {
    if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)){
    return "cat1"
- }else if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)){
+ } else if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)){
    return "cat2"
- }else{
+ } else {
   return "os gatos trombam e o rato foge"
  }
 }
@@ -71,12 +71,12 @@ function catAndMouse(mouse, cat1, cat2) {
 
 function fizzBuzz(arr) {
   let newarr = [];
-  for(index = 0; index < arr.length; index+=1) {
-    if(arr[index] % 3 === 0 && arr[index] %5 ===0){
+  for (index = 0; index < arr.length; index+= 1) {
+    if (arr[index] % 3 === 0 && arr[index] % 5 ===0) {
       newarr.push ("fizzBuzz");
-    }else if(arr[index] % 3 === 0){
+    }else if (arr[index] % 3 === 0) {
       newarr.push("fizz");
-    }else if (arr [index] %5 ===0){
+    }else if (arr [index] % 5 ===0) {
       newarr.push("buzz");
     }else{
       newarr.push("bug!");
@@ -88,8 +88,9 @@ function fizzBuzz(arr) {
 // Desafio 9
 
 function encode(str) {
-  for(let i = 0; i < str.length; i+=1){
-    let newstr = str.replace(/a/, '1');
+  let newstr = " ";
+  for (let i = 0; i < str.length; i+= 1) {
+    newstr = str.replace(/a/, '1');
     newstr = str.replace(/e/, '2');
     newstr = str.replace(/i/, '3');
     newstr = str.replace(/o/, '4');
@@ -99,8 +100,9 @@ function encode(str) {
 }
 
 function decode(strg) {
-  for(let i = 0; i < str.length; i+=1){
-    let newstr = str.replace(/1/, 'a');
+  let newstr = " ";
+  for (let i = 0; i < str.length; i+= 1) {
+    newstr = str.replace(/1/, 'a');
     newstr = str.replace(/2/, 'e');
     newstr = str.replace(/3/, 'i');
     newstr = str.replace(/4/, 'o');
