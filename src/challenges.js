@@ -9,7 +9,8 @@ function compareTrue(a, b) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * altura) / 2
+  let triangleArea = (base * altura) / 2
+  return triangleArea
 }
 
 // Desafio 3
@@ -29,32 +30,83 @@ function concatName(arr) {
 }
 
 
-// Desafio 5
-function footballPoints() {
-  // seu código aqui
+// Desafio 5 considere que cada vitória vale 3 pontos e cada empate vale 1 ponto.
+function footballPoints(wins, ties){
+  return (wins * 3) + (ties * 1)
 }
 
-// Desafio 6
-function highestCount() {
-  // seu código aqui
+// Desafio 6 demorei para desenvolver nessa porque ainda tenho dificuldade no chamar o conteúdo da posição do array.
+function highestCount(numbers) {
+  let tallerId = 0;
+  let cont = 0;
+  for (let key in numbers) {
+    if (numbers[key] > tallerId) {
+      tallerId = numbers[key];
+    }
+    if(numbers[key]< 0){
+      tallerId = numbers[key];
+    }
+  }
+  for(let key in numbers) {
+    if (tallerId === numbers[key]){
+    cont +=1;
+    }
+  }
+  return cont
 }
 
-// Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+// Desafio 7 Muito massa, fiquei uma cara procurando a função módulo até a Laura Fumagalli me dizer, busca com outra palavra, tipo um numero absoluto. ai achei a ferramenta usada aqui na documentação: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs  =)
 
+function catAndMouse(mouse, cat1, cat2) {
+   if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)){
+   return "cat1"
+ }else if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)){
+   return "cat2"
+ }else{
+  return "os gatos trombam e o rato foge"
+ }
+}
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+// precisei criar um array para que ele retornasse todas as strings que recebia. Dica recebida pelo grande Fernando Gós.
+
+function fizzBuzz(arr) {
+  let newarr = [];
+  for(index = 0; index < arr.length; index+=1) {
+    if(arr[index] % 3 === 0 && arr[index] %5 ===0){
+      newarr.push ("fizzBuzz");
+    }else if(arr[index] % 3 === 0){
+      newarr.push("fizz");
+    }else if (arr [index] %5 ===0){
+      newarr.push("buzz");
+    }else{
+      newarr.push("bug!");
+    }
+  }
+  return newarr
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+
+function encode(str) {
+  for(let i = 0; i < str.length; i+=1){
+    let newstr = str.replace(/a/, '1');
+    newstr = str.replace(/e/, '2');
+    newstr = str.replace(/i/, '3');
+    newstr = str.replace(/o/, '4');
+    newstr = str.replace(/u/, '5');
+  }
+  return newstr
 }
-function decode() {
-  // seu código aqui
+
+function decode(strg) {
+  for(let i = 0; i < str.length; i+=1){
+    let newstr = str.replace(/1/, 'a');
+    newstr = str.replace(/2/, 'e');
+    newstr = str.replace(/3/, 'i');
+    newstr = str.replace(/4/, 'o');
+    newstr = str.replace(/5/, 'u');
+  }
+  return newstr
 }
 
 module.exports = {
