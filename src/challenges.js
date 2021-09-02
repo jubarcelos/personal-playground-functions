@@ -9,8 +9,7 @@ function compareTrue(a, b) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let triangleArea = (base * altura) / 2
-  return triangleArea
+  return (base * height) / 2
 }
 
 // Desafio 3
