@@ -20,7 +20,7 @@ function splitSentence(str) {
   return array = str.split(" ");
 }
 
-// Desafio 4 'ÚLTIMO ITEM, PRIMEIRO ITEM' - Aqui eu busquei na documentação essas duas ferramentas de auxilio, o slice que serve pra retorna uma cópia de parte de um array, pode ser a posição exata ou o intervalo. Se der um intervalo ele pega o primeiro desse intervalo. Essa ferramenta o Fernando Gós que me alertou, enquanto eu tentava usar shift e pop que não dava certo.
+// Desafio 4 'ÚLTIMO ITEM, PRIMEIRO ITEM' - Aqui eu busquei na documentação essas duas ferramentas de auxilio, o slice que serve pra retorna uma cópia de parte de um array, pode ser a posição exata ou o intervalo. Se der um intervalo ele pega o primeiro desse intervalo. Essa ferramenta o Fernando Gós que me alertou, enquanto eu tentava usar shift e pop que não dava certo. Usei também o concat para unir os arrays e join para colocar algo entre eles.
 
 function concatName(arr) {
  let last = arr.slice(-1);
