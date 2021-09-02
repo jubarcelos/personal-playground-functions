@@ -20,7 +20,7 @@ function splitSentence(str) {
   return array = str.split(" ");
 }
 
-// Desafio 4 'ÚLTIMO ITEM, PRIMEIRO ITEM' - Aqui eu busquei na documentação essas duas ferramentas de auxilio, o slice que serve pra retorna uma cópia de parte de um array, pode ser a posição exata ou o intervalo. Se der um intervalo ele pega o primeiro desse intervalo. Essa ferramenta o Fernando Gós que me alertou, enquanto eu tentava usar shift e pop que não dava certo. Usei também o concat para unir os arrays e join para colocar algo entre eles.
+// Desafio 4 'ÚLTIMO ITEM, PRIMEIRO ITEM' - Aqui eu busquei na documentação essas duas ferramentas de auxilio, o slice que serve pra retorna uma cópia de parte de um array, pode ser a posição exata ou o intervalo. Se der um intervalo ele pega o primeiro desse intervalo. Essa ferramenta o Fernando Gós que me alertou, enquanto eu tentava usar shift e pop que não dava certo. Usei também o concat para unir os arrays e join para juntar os dois em um array só e colocar um espaço entre eles.
 
 function concatName(arr) {
  let last = arr.slice(-1);
@@ -28,7 +28,6 @@ function concatName(arr) {
  let newarr = last.concat(first);
  return newarr.join(', ');
 }
-
 
 // Desafio 5 considere que cada vitória vale 3 pontos e cada empate vale 1 ponto.
 function footballPoints(wins, ties){
@@ -84,32 +83,60 @@ function fizzBuzz(arr) {
   }
   return newarr
 }
-
 // Desafio 9
+// var re = /maçãs/gi;
+// var str = 'As maçãs são redondas. As maçãs são suculentas.';
+// var newstr = str.replace(re, 'laranjas');
+// console.log(newstr);
+// // retorna
+// // "As laranjas são redondas. As laranjas são suculentas."
 
+// function encode(str) {
+//   for (let i = 0; i < str.length; i+= 1) {
+//     let new1 = str.replace('a', '1');
+//     new1 = str.replace('e', '2');
+//     new1= str.replace('i', '3');
+//     new1= str.replace('o', '4');
+//     new1 = str.replace('u', '5');
+//   }
+// return new1
+// }
 function encode(str) {
-  let newstr = " ";
-  for (let i = 0; i < str.length; i+= 1) {
-    newstr = str.replace(/a/, '1');
-    newstr = str.replace(/e/, '2');
-    newstr = str.replace(/i/, '3');
-    newstr = str.replace(/o/, '4');
-    newstr = str.replace(/u/, '5');
+  const arr = str.split('');
+  for(i = 0; i < arr.length; i+= 1){
+    if (arr[i] === 'a') {
+      arr.splice(i, 1, '1');
+    } else if (arr[i] === 'e') {
+      arr.splice(i, 1, '2');
+    } else if (arr[i] === 'i') {
+      arr.splice(i, 1, '3');
+    } else if (arr[i] === 'o') {
+      arr.splice(i, 1, '4');
+    } else if (arr[i] === 'u') {
+      arr.splice(i, 1, '5');
+    }
   }
-  return newstr
+  return arr.join('');
 }
 
-function decode(strg) {
-  let newstr = " ";
-  for (let i = 0; i < str.length; i+= 1) {
-    newstr = str.replace(/1/, 'a');
-    newstr = str.replace(/2/, 'e');
-    newstr = str.replace(/3/, 'i');
-    newstr = str.replace(/4/, 'o');
-    newstr = str.replace(/5/, 'u');
+function decode(str) {
+  const arr = str.split('');
+  for(i = 0; i < arr.length; i+= 1){
+    if (arr[i] === '1') {
+      arr.splice(i, 1, 'a');
+    } else if (arr[i] === '2') {
+      arr.splice (i, 1, 'e');
+    } else if (arr[i] === '3') {
+      arr.splice (i, 1, 'i');
+    } else if (arr[i] === '4') {
+      arr.splice (i, 1, 'o');
+    } else if (arr[i] === '5') {
+      arr.splice (i, 1, 'u');
+    }
   }
-  return newstr
+  return arr.join('');
 }
+console.log(decode("Seu animalzinho"))
 
 module.exports = {
   calcArea,
