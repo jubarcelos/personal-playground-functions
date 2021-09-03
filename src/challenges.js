@@ -31,7 +31,7 @@ function concatName(arr) {
 
 // Desafio 5 considere que cada vitória vale 3 pontos e cada empate vale 1 ponto.
 function footballPoints(wins, ties){
-  return (wins * 3) + (ties * 1)
+  return (wins * 3) + (ties)
 }
 
 // Desafio 6 demorei para desenvolver nessa porque ainda tenho dificuldade no chamar o conteúdo da posição do array.
@@ -83,14 +83,7 @@ function fizzBuzz(arr) {
   }
   return newarr
 }
-// Desafio 9
-// var re = /maçãs/gi;
-// var str = 'As maçãs são redondas. As maçãs são suculentas.';
-// var newstr = str.replace(re, 'laranjas');
-// console.log(newstr);
-// // retorna
-// // "As laranjas são redondas. As laranjas são suculentas."
-
+// Desafio 9  Pesquisei na documentação as opções que executavam essas trocas, mas não consegui implementar direto na string e preferi fazer essa transformação em array, como o Brunão me ajudou a pensar.
 // function encode(str) {
 //   for (let i = 0; i < str.length; i+= 1) {
 //     let new1 = str.replace('a', '1');
