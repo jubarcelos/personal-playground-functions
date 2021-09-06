@@ -93,17 +93,17 @@ function encode(str) {
 
 function decode(str) {
   const arr = str.split('');
-  for (i = 0; i < arr.length; i += 1) {
-    if (arr[i] === '1') {
-      arr.splice(i, 1, 'a');
-    } else if (arr[i] === '2') {
-      arr.splice(i, 1, 'e');
-    } else if (arr[i] === '3') {
-      arr.splice(i, 1, 'i');
-    } else if (arr[i] === '4') {
-      arr.splice(i, 1, 'o');
-    } else if (arr[i] === '5') {
-      arr.splice(i, 1, 'u');
+  for (let index = 0; index < arr.length; index += 1) {
+    if (arr[index] === '1') {
+      arr.splice(index, 1, 'a');
+    } else if (arr[index] === '2') {
+      arr.splice(index, 1, 'e');
+    } else if (arr[index] === '3') {
+      arr.splice(index, 1, 'i');
+    } else if (arr[index] === '4') {
+      arr.splice(index, 1, 'o');
+    } else if (arr[index] === '5') {
+      arr.splice(index, 1, 'u');
     }
   }
   return arr.join('');
