@@ -8,11 +8,11 @@ function calcArea(base, height) {
   return (base * height) / 2;
 }
 
-// Desafio 3
+// Desafio 3 - se eu não colocar o espaço dentro ele separa uma por uma das letras.
 
-// Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original.
 function splitSentence(str) {
-  return str.split('');
+  let array = str.split(' ');
+  return array 
 }
 
 // Desafio 4 'ÚLTIMO ITEM, PRIMEIRO ITEM' - Havia feito com slice, concat e join, mas o Brunão me ajudou a pensar simples.
@@ -33,13 +33,13 @@ function highestCount(numbers) {
     if (numbers[key] > tallerId) {
       tallerId = numbers[key];
     }
-    if(numbers[key]< 0) {
+    if (numbers[key] < 0) {
       tallerId = numbers[key];
     }
   }
   for (let key in numbers) {
-    if (tallerId === numbers[key]){
-    cont += 1;
+    if (tallerId === numbers[key]) {
+      cont += 1;
     }
   }
   return cont
@@ -58,7 +58,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 function fizzBuzz(arr) {
   let newArr = [];
-  for (index = 0; index < arr.length; index += 1) {
+  for (let index = 0; index < arr.length; index += 1) {
     if (arr[index] % 3 === 0 && arr[index] % 5 === 0) {
       newArr.push('fizzBuzz');
     } else if (arr[index] % 3 === 0) {

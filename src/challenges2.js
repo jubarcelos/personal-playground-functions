@@ -52,7 +52,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 function hydrate(str) {
   let myInt = str.replace(/\D/g, ' '); // deixa só os numeros, substitui o que não é número por vazio. Dica de Alex Weyne no StackOverFlow https://stackoverflow.com/questions/30607419/return-only-numbers-from-string/30607466
-  let newNum = (num) => Number(num); // função para transformar em numeral com retorno específico
+  let newNum = (myInt) => Number(myInt); // função para transformar em numeral com retorno específico
   let intArr = Array.from(String(myInt), newNum); // faz array de numeros
   let result = 0;
   for (let index = 0; index < intArr.length; index += 1) {
