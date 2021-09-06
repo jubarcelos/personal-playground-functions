@@ -49,9 +49,24 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-
+function hydrate(str) {
+  let num = str.replace(/[^0-9]/g,'');
+  let result = '0';
+  for (index = 0; index < num.length; index += 1){
+    result += num[index];
+    Number.parseInt(result, 10);
+    console.log(result);
+  }if (result === 1) {
+    return `${result} copo de água.`
+  } else if (result > 1) {
+    return `${result} copos de água.`
+  }
 }
+hydrate('1 copo, 2 canecas, 3 sei la')
+
+// var num = 15;
+// alert(String.replace(num, /5/, '2'));
+
 
 module.exports = {
   generatePhoneNumber,

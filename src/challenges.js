@@ -120,7 +120,10 @@ function decode(str) {
   }
   return arr.join('');
 }
-console.log(decode("Seu animalzinho"))
+
+
+//var num = 15;
+// alert(String.replace(num, /5/, '2'));
 
 module.exports = {
   calcArea,
