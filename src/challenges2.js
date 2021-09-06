@@ -31,8 +31,8 @@ function generatePhoneNumber(array) {
     if (array[index] < 0 || array[index] > 9) {
       return `não é possível gerar um número de telefone com esses valores`;
     }
-    numberCount[array[index]] += 1;
-    if (numberCount[array[index]] >= 3) {
+    numberCount[array[index]] += 1; //identifica o numero que recebe na posição index do array
+    if (numberCount[array[index]] >= 3) { //posição do contador com o numero do array
       return `não é possível gerar um número de telefone com esses valores`;
     }
   }
@@ -48,11 +48,13 @@ function triangleCheck(lineA, lineB, lineC) {
   }
 }
 
-// Desafio 13
+// Desafio 13 
+// esse site me ajudou na criação do array de numeros inteiros.
+// https://www.geeksforgeeks.org/how-to-convert-a-number-into-array-in-javascript/
 
 function hydrate(str) {
-  let myInt = str.replace(/\D/g, ""); // deixa só os numeros, substitui o que não é número por vazio. Dica de Alex Weyne
-  let newNum = num => Number(num); //função para numeral
+  let myInt = str.replace(/\D/g, ""); // deixa só os numeros, substitui o que não é número por vazio. Dica de Alex Weyne no StackOverFlow https://stackoverflow.com/questions/30607419/return-only-numbers-from-string/30607466
+  let newNum = num => Number(num); //função para transformar em numeral
   let intArr = Array.from(String(myInt), newNum); //faz array de numeros
   let result = 0;
   for (let i = 0; i < intArr.length; i += 1) {
@@ -64,9 +66,6 @@ function hydrate(str) {
     return `${result} copos de água`;
   }
 }
-
-// var num = 15;
-// alert(String.replace(num, /5/, '2'));
 
 module.exports = {
   generatePhoneNumber,
