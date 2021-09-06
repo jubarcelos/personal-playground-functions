@@ -41,28 +41,26 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineB - lineA) && lineC < (lineB + lineA) && lineB < (lineA + lineC) && lineA < (lineB + lineC)) {
-    return true;
-  } else {
+  if (lineA + lineB < lineC || lineB + lineC < lineA || lineC + lineA < lineB) {
     return false;
   }
+  return true;
 }
-
 // Desafio 13 
 // esse site me ajudou na criação do array de numeros inteiros.
 // https://www.geeksforgeeks.org/how-to-convert-a-number-into-array-in-javascript/
 
 function hydrate(str) {
-  let myInt = str.replace(/\D/g, ""); // deixa só os numeros, substitui o que não é número por vazio. Dica de Alex Weyne no StackOverFlow https://stackoverflow.com/questions/30607419/return-only-numbers-from-string/30607466
-  let newNum = num => Number(num); //função para transformar em numeral
-  let intArr = Array.from(String(myInt), newNum); //faz array de numeros
+  let myInt = str.replace(/\D/g, ' '); // deixa só os numeros, substitui o que não é número por vazio. Dica de Alex Weyne no StackOverFlow https://stackoverflow.com/questions/30607419/return-only-numbers-from-string/30607466
+  let newNum = (num) => Number(num); // função para transformar em numeral com retorno específico
+  let intArr = Array.from(String(myInt), newNum); // faz array de numeros
   let result = 0;
-  for (let i = 0; i < intArr.length; i += 1) {
-    result += intArr[i];
+  for (let index = 0; index < intArr.length; index += 1) {
+    result += intArr[index];
   }
   if (result === 1) {
     return `${result} copo de água`;
-  } else if (result > 1) {
+  } if (result > 1) {
     return `${result} copos de água`;
   }
 }

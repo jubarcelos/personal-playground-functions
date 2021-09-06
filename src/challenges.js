@@ -1,41 +1,31 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if (a === true && b === true) {
-    return true;
-  } else {
-    return false;
-  }
+  return (a === true && b === true);
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height) / 2
+  return (base * height) / 2;
 }
 
 // Desafio 3
 
 // Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original.
-
 function splitSentence(str) {
-  return array = str.split(" ");
+  return str.split('');
 }
 
-// Desafio 4 'ÚLTIMO ITEM, PRIMEIRO ITEM' - Aqui eu busquei na documentação essas duas ferramentas de auxilio, o slice que serve pra retorna uma cópia de parte de um array, pode ser a posição exata ou o intervalo. Se der um intervalo ele pega o primeiro desse intervalo. Essa ferramenta o Fernando Gós que me alertou, enquanto eu tentava usar shift e pop que não dava certo. Usei também o concat para unir os arrays e join para juntar os dois em um array só e colocar um espaço entre eles.
-
+// Desafio 4 'ÚLTIMO ITEM, PRIMEIRO ITEM' - Havia feito com slice, concat e join, mas o Brunão me ajudou a pensar simples.
 function concatName(arr) {
-  let last = arr.slice(-1);
-  let first = arr.slice(0, 1);
-  let newarr = last.concat(first);
-  return newarr.join(', ');
+  return `${arr[arr.length - 1]}, ${arr[0]}`;
 }
 
 // Desafio 5 considere que cada vitória vale 3 pontos e cada empate vale 1 ponto.
 function footballPoints(wins, ties) {
-  return (wins * 3) + (ties)
+  return (wins * 3) + (ties);
 }
 
 // Desafio 6 demorei para desenvolver nessa porque ainda tenho dificuldade no chamar o conteúdo da posição do array.
-
 function highestCount(numbers) {
   let tallerId = 0;
   let cont = 0;
@@ -43,13 +33,13 @@ function highestCount(numbers) {
     if (numbers[key] > tallerId) {
       tallerId = numbers[key];
     }
-    if (numbers[key] < 0) {
+    if(numbers[key]< 0) {
       tallerId = numbers[key];
     }
   }
   for (let key in numbers) {
-    if (tallerId === numbers[key]) {
-      cont += 1;
+    if (tallerId === numbers[key]){
+    cont += 1;
     }
   }
   return cont
@@ -59,45 +49,43 @@ function highestCount(numbers) {
 
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
-    return "cat1"
-  } else if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
-    return "cat2"
-  } else {
-    return "os gatos trombam e o rato foge"
-  }
+    return 'cat1';
+  } if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
+    return 'cat2';
+  } return 'os gatos trombam e o rato foge';
 }
 // Desafio 8
 
 function fizzBuzz(arr) {
-  let newarr = [];
+  let newArr = [];
   for (index = 0; index < arr.length; index += 1) {
     if (arr[index] % 3 === 0 && arr[index] % 5 === 0) {
-      newarr.push("fizzBuzz");
+      newArr.push('fizzBuzz');
     } else if (arr[index] % 3 === 0) {
-      newarr.push("fizz");
+      newArr.push('fizz');
     } else if (arr[index] % 5 === 0) {
-      newarr.push("buzz");
+      newArr.push('buzz');
     } else {
-      newarr.push("bug!");
+      newArr.push('bug!');
     }
   }
-  return newarr
+  return newArr;
 }
 // Desafio 9  Pesquisei na documentação as opções que executavam essas trocas,achei o "replace" mas não consegui implementar direto, mesmo assistindo vídeos da Trybe, na string e preferi fazer essa transformação em array, como o Brunão me lembrou que poderia ser mais.
 
 function encode(str) {
   const arr = str.split('');
-  for (i = 0; i < arr.length; i += 1) {
-    if (arr[i] === 'a') {
-      arr.splice(i, 1, '1');
-    } else if (arr[i] === 'e') {
-      arr.splice(i, 1, '2');
-    } else if (arr[i] === 'i') {
-      arr.splice(i, 1, '3');
-    } else if (arr[i] === 'o') {
-      arr.splice(i, 1, '4');
-    } else if (arr[i] === 'u') {
-      arr.splice(i, 1, '5');
+  for (let index = 0; index < arr.length; index += 1) {
+    if (arr[index] === 'a') {
+      arr.splice(index, 1, '1');
+    } else if (arr[index] === 'e') {
+      arr.splice(index, 1, '2');
+    } else if (arr[index] === 'i') {
+      arr.splice(index, 1, '3');
+    } else if (arr[index] === 'o') {
+      arr.splice(index, 1, '4');
+    } else if (arr[index] === 'u') {
+      arr.splice(index, 1, '5');
     }
   }
   return arr.join('');
@@ -120,10 +108,6 @@ function decode(str) {
   }
   return arr.join('');
 }
-
-
-//var num = 15;
-// alert(String.replace(num, /5/, '2'));
 
 module.exports = {
   calcArea,
