@@ -1,7 +1,7 @@
 # Project: Playground functions.
 
 Overview
-This project is more like a HackerRank, just a lot of functions applyed to solve individuals tasks.
+This project is like a HackerRank, just usin JS functions to solve simple individuals tasks.
 
 ### Proposed development
 
@@ -10,8 +10,10 @@ In this module the objective was practice programming logic and HOFs in general.
 **Technologies used**
 
 - Javascript
-  - functions HOF to find and filter options
+  - JS functions 
   - Array
+  - Splite, Split, Math
+  - for, for-in
 
 ### Improviments
 
